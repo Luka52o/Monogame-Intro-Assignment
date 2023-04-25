@@ -40,16 +40,12 @@ namespace Monogame_Intro_Assignment
             manRunning = Content.Load<Texture2D>("manRunning");
             geeseFlying = Content.Load<Texture2D>("geeseFlying");
             apocolypse = Content.Load<Texture2D>("apocolypse");
-
-            // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
-            // TODO: Add your update logic here
 
             base.Update(gameTime);
         }
@@ -70,8 +66,6 @@ namespace Monogame_Intro_Assignment
             _spriteBatch.Draw(manRunning, new Vector2(runningManxPos, 600), Color.White);
             _spriteBatch.Draw(geeseFlying, new Vector2(geeseFlyingxPos, 10), Color.White);
             _spriteBatch.End();
-
-            // TODO: Add your drawing code here
 
             base.Draw(gameTime);
         }
